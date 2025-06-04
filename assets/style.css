@@ -1,0 +1,173 @@
+@import url('./styles/font.css');
+@import url('./styles/input.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* mobile first approach */
+/* Base styles for mobile (0-767px) */
+:root {
+  --container-padding: 1rem;
+  --element-interactive: #5BC8AF;
+  --element-highlight: #5BC8AF;
+  --element-faded: #EAEAEA;
+  --background-tip: #297C6B;
+  --background: #194D44;
+  --text-main: #333;
+  --font-montserrat: 'Montserrat';
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+
+
+#hero .hero-devider {
+  display: flex;
+  flex-direction: column;
+}
+
+#hero .banner-container,
+#hero .form-container {
+  background-color: var(--background);
+  position: relative;
+}
+
+#hero .banner-container img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  opacity: 0.8;
+  z-index: 0;
+  mask: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+#hero .banner-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #194D41 0%, rgba(25, 77, 65, 0.7) 100%);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+#hero .banner-container .overlay-secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #444444;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+#hero .banner-container .banner-caption {
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 15px;
+}
+
+#hero .banner-container .banner-caption h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#hero .banner-container .banner-caption h1 span:first-child {
+  color: var(--background);
+  text-shadow: #fff 0px 0px 1px, #fff 0px 0px 1px, #fff 0px 0px 1px,
+    #fff 0px 0px 1px, #fff 0px 0px 1px, #fff 0px 0px 1px;
+}
+
+#hero .banner-container .banner-caption p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #FFFFFFCC;
+}
+
+#hero .form-container {
+  padding: 15px;
+}
+
+#hero .form-card {
+  background: linear-gradient(180deg, #2A7D6C 0%, rgba(62, 105, 96, 0.62) 100%);
+  box-shadow: 0px 10px 50px 0px #0000001F;
+  position: relative;
+  top: -80px;
+  z-index: 4;
+  border-radius: 15px;
+  height: 555px;
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#hero .form-card .form-title {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+#hero .form-card .form-wrapper > *{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#hero .form-card .form-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Tablet styles (768px and up) */
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: 2rem;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media screen and (min-width: 1024px) {
+  :root {
+    --container-padding: 3rem;
+  }
+}
+
+/* Large desktop styles (1440px and up) */
+@media screen and (min-width: 1440px) {
+  :root {
+    --container-padding: 4rem;
+  }
+}
