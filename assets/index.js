@@ -20,12 +20,13 @@ document.addEventListener('click', function(e) {
   const allWrappers = document.querySelectorAll('.outlined-input-wrapper');
   allWrappers.forEach(wrapper => {
     if (!wrapper.contains(e.target)) {
-      const input = wrapper.querySelector('input');
+      const input = wrapper.querySelector('input, select');
       const label = wrapper.querySelector('label');
       const legend = wrapper.querySelector('legend');
 
-      // Only remove active if input is empty
-      if (input && !input.value) {
+      // Only remove active if input/select is empty or default value
+      if (input && ((input.tagName === 'INPUT' && !input.value) || 
+          (input.tagName === 'SELECT' && input.selectedIndex === 0))) {
         if (label) {
           label.classList.remove('active');
         }
@@ -33,6 +34,23 @@ document.addEventListener('click', function(e) {
           legend.classList.remove('active');
         }
       }
+    }
+  });
+});
+
+// Add change event listener for select elements
+document.querySelectorAll('.outlined-input-wrapper select').forEach(select => {
+  select.addEventListener('change', function() {
+    const wrapper = this.closest('.outlined-input-wrapper');
+    const label = wrapper.querySelector('label');
+    const legend = wrapper.querySelector('legend');
+    
+    if (this.selectedIndex > 0) {
+      label?.classList.add('active');
+      legend?.classList.add('active');
+    } else {
+      label?.classList.remove('active');
+      legend?.classList.remove('active');
     }
   });
 });

@@ -1,5 +1,7 @@
+@import url('./styles/variables.css');
 @import url('./styles/font.css');
 @import url('./styles/input.css');
+@import url('./styles/button.css');
 
 * {
   box-sizing: border-box;
@@ -11,18 +13,6 @@ body {
   padding: 0;
 }
 
-/* mobile first approach */
-/* Base styles for mobile (0-767px) */
-:root {
-  --container-padding: 1rem;
-  --element-interactive: #5BC8AF;
-  --element-highlight: #5BC8AF;
-  --element-faded: #EAEAEA;
-  --background-tip: #297C6B;
-  --background: #194D44;
-  --text-main: #333;
-  --font-montserrat: 'Montserrat';
-}
 
 .uppercase {
   text-transform: uppercase;
@@ -149,6 +139,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+#hero .form-card .btn-primary{
+  width: 100%;
 }
 
 /* Tablet styles (768px and up) */

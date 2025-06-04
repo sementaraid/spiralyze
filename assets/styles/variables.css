@@ -1,0 +1,13 @@
+
+/* mobile first approach */
+/* Base styles for mobile (0-767px) */
+:root {
+  --container-padding: 1rem;
+  --element-interactive: #5BC8AF;
+  --element-highlight: #5BC8AF;
+  --element-faded: #EAEAEA;
+  --background-tip: #297C6B;
+  --background: #194D44;
+  --text-main: #333;
+  --font-montserrat: 'Montserrat';
+}
