@@ -1,56 +1,17 @@
-document.addEventListener('click', function(e) {
-  // Get currently focused element
-  const focusedElement = document.activeElement;
+/**
+ * Main JavaScript Entry Point
+ * Initializes all components when the DOM is fully loaded
+ */
 
-  if (focusedElement?.closest('.outlined-input-wrapper')) {
-    const wrapper = focusedElement.closest('.outlined-input-wrapper');
-    const label = wrapper.querySelector('label');
-    const legend = wrapper.querySelector('legend');
-
-    // Add active class to label and legend
-    if (label) {
-      label.classList.add('active');
-    }
-    if (legend) {
-      legend.classList.add('active'); 
-    }
+// Initialize all components when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize form inputs
+  if (typeof FormHandler === 'function') {
+    new FormHandler();
   }
-
-  // Remove active classes when clicking outside
-  const allWrappers = document.querySelectorAll('.outlined-input-wrapper');
-  allWrappers.forEach(wrapper => {
-    if (!wrapper.contains(e.target)) {
-      const input = wrapper.querySelector('input, select');
-      const label = wrapper.querySelector('label');
-      const legend = wrapper.querySelector('legend');
-
-      // Only remove active if input/select is empty or default value
-      if (input && ((input.tagName === 'INPUT' && !input.value) || 
-          (input.tagName === 'SELECT' && input.selectedIndex === 0))) {
-        if (label) {
-          label.classList.remove('active');
-        }
-        if (legend) {
-          legend.classList.remove('active');
-        }
-      }
-    }
-  });
-});
-
-// Add change event listener for select elements
-document.querySelectorAll('.outlined-input-wrapper select').forEach(select => {
-  select.addEventListener('change', function() {
-    const wrapper = this.closest('.outlined-input-wrapper');
-    const label = wrapper.querySelector('label');
-    const legend = wrapper.querySelector('legend');
-    
-    if (this.selectedIndex > 0) {
-      label?.classList.add('active');
-      legend?.classList.add('active');
-    } else {
-      label?.classList.remove('active');
-      legend?.classList.remove('active');
-    }
-  });
+  
+  // Initialize slider if it exists
+  if (document.querySelector('.slider-wrapper') && typeof Slider === 'function') {
+    new Slider();
+  }
 });

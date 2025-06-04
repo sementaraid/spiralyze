@@ -2,6 +2,7 @@
 @import url('./styles/font.css');
 @import url('./styles/input.css');
 @import url('./styles/button.css');
+@import url('./styles/slider.css');
 
 * {
   box-sizing: border-box;
