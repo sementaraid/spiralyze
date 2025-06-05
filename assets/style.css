@@ -3,6 +3,7 @@
 @import url('./styles/input.css');
 @import url('./styles/button.css');
 @import url('./styles/slider.css');
+@import url('./styles/popover.css');
 
 * {
   box-sizing: border-box;
@@ -220,6 +221,10 @@ body {
   color: #333333;
 }
 
+#intro .introduction .introduction-content button{
+  width: 100%;
+}
+
 #intro-2{
   background-color: #F5F5F5;
   padding: 50px 0;
@@ -236,6 +241,49 @@ body {
   font-weight: 400;
   color: #333333;
 }
+
+
+#slider .slide-text{
+  background-color: var(--background);
+  font-family: var(--font-montserrat);
+  padding: 150px 35px 35px 35px;
+  color: white;
+  font-style: italic;
+  line-height: 24px;
+  font-size: 14px;
+  border-radius: 15px;
+}
+
+#slider .slide-body{
+  padding-top: 50px;
+}
+
+#slider img:first-child{
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  margin-left: 35px;
+  position: absolute;
+}
+
+#slider img:nth-child(2){
+  width: 60px;
+  height: 47px;
+  border-radius: 15px;
+  margin-left: 35px;
+  position: absolute;
+  top: 130px;
+  right: 50px;
+}
+
+#slider .slide-text p:first-child{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: capitalize;
+}
+
+
 
 /* Tablet styles (768px and up) */
 @media screen and (min-width: 768px) {

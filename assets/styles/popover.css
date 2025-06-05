@@ -1,0 +1,60 @@
+/* Popover Styles */
+.popover {
+  position: relative;
+  display: inline-block;
+}
+
+.popover-content {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  margin-bottom: 10px;
+}
+
+.popover-content p {
+  margin: 0;
+}
+
+.popover-arrow {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 2px;
+}
+
+.popover:hover .popover-content,
+.popover:hover .popover-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive adjustments for popover */
+@media screen and (max-width: 768px) {
+  .popover-content {
+    width: 250px;
+    font-size: 13px;
+    padding: 12px;
+  }
+} 
