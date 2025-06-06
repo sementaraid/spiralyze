@@ -13,71 +13,71 @@
 
   </div>
   <div id="hero">
+    <div class="overlay"></div>
     <div class="hero-devider">
-      <div class="banner-container">
-        <img src="assets/images/background-1.png" alt="Get Intervention" />
-        <div class="overlay"></div>
-        <div class="overlay-secondary"></div>
-        <div class="banner-caption text-montserrat">
-          <h1 class="uppercase">
-            <span>get an</span>
-            <span>intervention</span>
-          </h1>
-          <p class="text-montserrat">
-            Showing greater respect to older adults can be done in several ways :
-            acknowledging and putting to use the talents and skills of older adults;
-            creating intergenerational initiatives;
-            and allowing older adults to stay active and independent for as long as possible.
-          </p>
-        </div>
+      <div class="banner-caption text-montserrat">
+        <h1 class="uppercase">
+          <span>get an</span>
+          <span>intervention</span>
+        </h1>
+        <p class="text-montserrat">
+          Showing greater respect to older adults can be done in several ways :
+          acknowledging and putting to use the talents and skills of older adults;
+          creating intergenerational initiatives;
+          and allowing older adults to stay active and independent for as long as possible.
+        </p>
       </div>
       <div class="form-container">
         <div class="form-card">
           <form onsubmit="event.preventDefault()">
             <div class="form-title">contact us</div>
             <div class="form-wrapper">
-              <div class="outlined-input-wrapper">
-                <label for="first-name">first name</label>
-                <div class="outlined-input-control">
-                  <input id="first-name" />
-                  <fieldset>
-                    <legend>
-                      <span>first name</span>
-                    </legend>
-                  </fieldset>
+              <div class="form-column">
+                <div class="outlined-input-wrapper">
+                  <label for="first-name">first name</label>
+                  <div class="outlined-input-control">
+                    <input id="first-name" />
+                    <fieldset>
+                      <legend>
+                        <span>first name</span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="outlined-input-wrapper">
+                  <label for="last-name">last name</label>
+                  <div class="outlined-input-control">
+                    <input id="last-name" />
+                    <fieldset>
+                      <legend>
+                        <span>last name</span>
+                      </legend>
+                    </fieldset>
+                  </div>
                 </div>
               </div>
-              <div class="outlined-input-wrapper">
-                <label for="last-name">last name</label>
-                <div class="outlined-input-control">
-                  <input id="last-name" />
-                  <fieldset>
-                    <legend>
-                      <span>last name</span>
-                    </legend>
-                  </fieldset>
+              <div class="form-column">
+                <div class="outlined-input-wrapper">
+                  <label for="business-email">business email</label>
+                  <div class="outlined-input-control">
+                    <input id="business-email" />
+                    <fieldset>
+                      <legend>
+                        <span>business email</span>
+                      </legend>
+                    </fieldset>
+                  </div>
                 </div>
-              </div>
-              <div class="outlined-input-wrapper">
-                <label for="business-email">business email</label>
-                <div class="outlined-input-control">
-                  <input id="business-email" />
-                  <fieldset>
-                    <legend>
-                      <span>business email</span>
-                    </legend>
-                  </fieldset>
-                </div>
-              </div>
-              <div class="outlined-input-wrapper">
-                <label for="company">company</label>
-                <div class="outlined-input-control">
-                  <input id="company" />
-                  <fieldset>
-                    <legend>
-                      <span>company</span>
-                    </legend>
-                  </fieldset>
+                <div class="outlined-input-wrapper">
+                  <label for="company">company</label>
+                  <div class="outlined-input-control">
+                    <input id="company" />
+                    <fieldset>
+                      <legend>
+                        <span>company</span>
+                      </legend>
+                    </fieldset>
+                  </div>
                 </div>
               </div>
               <div class="outlined-input-wrapper">
@@ -109,7 +109,11 @@
     </div>
   </div>
   <div id="intro">
-    <div class="gallery"></div>
+    <div class="gallery">
+      <img src="assets/images/u1.png" alt="Picture 1" />
+      <img src="assets/images/u2.png" alt="Picture 2" />
+      <img src="assets/images/u3.png" alt="Picture 3" />
+    </div>
     <div class="introduction">
       <div class="introduction-title section-title">
         <h3 class="uppercase">
@@ -239,11 +243,12 @@
         </div>
       </div>
       <div class="benefit-content">
-        <div>
+        <div class="benefit-paragraph">
           <p>
             Loneliness and social isolation are growing public health concerns in our ageing society. Whilst these
             experiences occur across the life span, 50% of individuals aged over 60 are at risk of social isolation and
-            one-third will experience some degree of loneliness later in life. It is vital to reduce loneliness and social
+            one-third will experience some degree of loneliness later in life. It is vital to reduce loneliness and
+            social
             isolation among older adults.
           </p>
           <p>
@@ -252,16 +257,62 @@
             interventions targeted at older people residing in the community or institutionalised settings.
           </p>
         </div>
-        <div>
+        <div class="benefit-list">
           <div class="popover">
-            <div class="btn btn-secondary">
-              Learn More
-              <img src="assets/icons/arrow.svg" alt="Arrow icon">
+            <div class="popover-trigger">
+              need assesment
             </div>
             <div class="popover-content">
-              <p>Interventions should focus on older adult's desire for connectedness, participation and independence. This includes creating social meeting places and fostering community relationships.</p>
+              <p>Interventions should focus on older adult's desire for connectedness, participation and independence.
+                This includes creating social meeting places and fostering community relationships.</p>
             </div>
-            <div class="popover-arrow"></div>
+          </div>
+          <div class="popover">
+            <div class="popover-trigger">
+              treatment plannning & placement
+            </div>
+            <div class="popover-content">
+              <p>Interventions should focus on older adult's desire for connectedness, participation and independence.
+                This includes creating social meeting places and fostering community relationships.</p>
+            </div>
+          </div>
+          <div class="popover">
+            <div class="popover-trigger">
+              transportation & logistics
+            </div>
+            <div class="popover-content">
+              <p>Interventions should focus on older adult's desire for connectedness, participation and independence.
+                This includes creating social meeting places and fostering community relationships.</p>
+            </div>
+          </div>
+          <div class="popover">
+            <div class="popover-trigger">
+              insuarance advocacy
+            </div>
+            <div class="popover-content">
+              <p>Interventions should focus on older adult's desire for connectedness, participation and independence.
+                This includes creating social meeting places and fostering community relationships.</p>
+            </div>
+          </div>
+          <div class="popover">
+            <div class="popover-trigger">
+              employment advocacy
+            </div>
+            <div class="popover-content">
+              <p>Interventions should focus on older adult's desire for connectedness, participation and independence.
+                This includes creating social meeting places and fostering community relationships.</p>
+            </div>
+          </div>
+          <div class="popover">
+            <div class="popover-trigger">
+              aftercare planning
+            </div>
+            <div class="popover-content">
+              <p>
+                Interventions should focus on older adult's desire for connectedness, participation and independence.
+                This includes creating social meeting places and fostering community relationships.
+              </p>
+            </div>
           </div>
         </div>
       </div>
