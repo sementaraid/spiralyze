@@ -3,11 +3,6 @@
  * Mobile-first styles for the image slider
  */
 
-#slider {
-  padding: 30px 0;
-  background: #f5f5f5;
-}
-
 .slider-container {
   width: 100%;
   padding: 0 15px;
@@ -155,7 +150,7 @@
   }
 
   .slider-wrapper {
-    min-height: 500px;
+    min-height: 400px;
   }
 
   .slider-nav {

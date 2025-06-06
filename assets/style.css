@@ -16,6 +16,11 @@ p {
   padding: 0;
 }
 
+.container {
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -74,8 +79,8 @@ p {
 #hero {
   background-color: var(--background);
   background-image: url('../assets/images/background-1.png');
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
+  background-position: top;
   background-repeat: no-repeat;
   display: block;
   position: relative;
@@ -136,7 +141,7 @@ p {
 }
 
 #hero .form-container {
-  padding: 15px;
+  padding: 15px 15px 200px 15px;
 }
 
 #hero .form-card {
@@ -193,10 +198,30 @@ p {
 
 #intro {
   position: relative;
-  background-color: #F5F5F5;
-  padding: 50px 0;
+  background-color: white;
+  padding: 20px 0;
 }
 
+#intro .section-title h3 {
+  background-color: unset;
+}
+
+#intro .wave {
+  position: absolute;
+  top: -110px;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#intro .wave {
+  width: 100%;
+}
+
+#intro .wave-2,
+#intro .wave-3 {
+  display: none;
+}
 
 #intro .gallery {
   display: none;
@@ -204,8 +229,15 @@ p {
 
 #intro .introduction {
   padding: 0 15px;
+  flex-direction: column;
 }
 
+
+#intro .introduction .introduction-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 #intro .introduction .introduction-content p {
   font-weight: 400;
@@ -219,6 +251,10 @@ p {
   width: 100%;
 }
 
+
+#slider {
+  padding: 30px 0;
+}
 
 #slider .slide-text {
   background-color: var(--background);
@@ -267,6 +303,7 @@ p {
 
 #intro-2 .benefit {
   padding: 0 15px;
+  flex-direction: column;
 }
 
 #intro-2 .benefit .section-caption {
@@ -310,13 +347,18 @@ p {
     letter-spacing: 0;
   }
 
+  #hero {
+    background-image: url('../assets/images/background-2.png');
+    background-size: cover;
+    background-position: center;
+  }
+
   #hero .banner-caption {
     padding: 15px 45px;
   }
 
   #hero .banner-caption h1 {
     font-size: 64px;
-    font-weight: 72px;
   }
 
 
@@ -326,7 +368,7 @@ p {
   }
 
   #hero .form-container {
-    padding: 0 80px 80px;
+    padding: 0 80px 200px 80px;
   }
 
   #hero .form-card {
@@ -338,8 +380,22 @@ p {
     flex-direction: row;
   }
 
+  #intro {
+    background-color: #F5F5F5;
+  }
+
+  #intro .wave-1,
+  #intro .wave-3 {
+    display: none;
+  }
+
+  #intro .wave-2 {
+    display: block;
+  }
+
   #intro .gallery {
-    padding: 15px;
+    width: 100%;
+    padding: 40px 15px 15px;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
@@ -368,6 +424,10 @@ p {
     display: flex;
     flex-direction: row;
     gap: 15px;
+  }
+
+  #slider {
+    background: #f5f5f5;
   }
 
   #slider .slide-item {
@@ -413,14 +473,105 @@ p {
 
 /* Desktop styles (1024px and up) */
 @media screen and (min-width: 1024px) {
-  :root {
-    --container-padding: 3rem;
+  .section-title h3 {
+    background-color: unset;
   }
-}
 
-/* Large desktop styles (1440px and up) */
-@media screen and (min-width: 1440px) {
-  :root {
-    --container-padding: 4rem;
+  #hero {
+    background-image: url('../assets/images/background-3.png');
+    background-size: cover;
+    background-position: top center;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
   }
+
+  #hero .hero-devider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  #hero .banner-caption {
+    padding: 0;
+    text-align: left;
+  }
+
+  #hero .form-container {
+    padding: 0;
+  }
+
+  #slider .slider-container{
+    max-width: 768px;
+  }
+  #slider .slide-body {
+    height: 270px;
+  }
+
+  #intro .wave-1,
+  #intro .wave-2 {
+    display: none;
+  }
+
+  #intro .wave-3 {
+    display: block;
+  }
+
+  #intro .introduction {
+    padding: 0 15px 160px;
+    flex-direction: column;
+  }
+  #intro .introduction .introduction-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+  }
+
+  #intro .introduction .introduction-content p:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+
+  #intro .introduction .introduction-content p:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1/3;
+  }
+
+  #intro .introduction .introduction-content p:nth-child(3),
+  #intro .introduction .introduction-content button {
+    grid-column: 3;
+  }
+
+  #slider {
+    position: relative;
+  }
+
+  #slider .slider-container {
+    position: relative;
+    top: -70px;
+  }
+
+  #slider .slider-wrapper {
+    min-height: 270px;
+  }
+
+  #slider .slide-text {
+    height: 100%;
+  }
+
+  #slider .slide-item .slide-image img:nth-child(1) {
+    width: 270px;
+    height: 270px;
+  }
+
+  #slider .slide-item .slide-image img:nth-child(2) {
+    top: 40px;
+  }
+
+  #intro-2,
+  #slider {
+    background-color: white;
+  }
+
+
 }
